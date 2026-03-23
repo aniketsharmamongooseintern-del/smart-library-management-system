@@ -1,0 +1,1737 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "book,hai,kya": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "avail,book,hai,kya,ye": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "book,do,have,this,you": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "avail,book,is,this": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "book,chahiy,mujh,ye": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "book,hai,kya,mil,sakti,ye": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "avail,hai,kya": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "book,can,get,i,this": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "book,is,present": {
+            "intent": "availability",
+            "domain": "default"
+          },
+          "book,hai,karni,rent": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,hai,leni,mujh": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,rent,this": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "a,book,i,rent,to,want": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,lend,me,this": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,can,i,take,this": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,hai,issu,karni": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,de,do,mujh,ye": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,chahiy,pe,rent": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,hai,harri,karni,potter,rent": {
+            "intent": "rent",
+            "domain": "default"
+          },
+          "book,hai,karni,return": {
+            "intent": "return",
+            "domain": "default"
+          },
+          "book,hai,karni,mujh,wapa": {
+            "intent": "return",
+            "domain": "default"
+          },
+          "book,return,this": {
+            "intent": "return",
+            "domain": "default"
+          },
+          "book,i,return,the,to,want": {
+            "intent": "return",
+            "domain": "default"
+          },
+          "book,hai,jama,karni": {
+            "intent": "return",
+            "domain": "default"
+          },
+          "back,book,give,this": {
+            "intent": "return",
+            "domain": "default"
+          },
+          "book,my,return": {
+            "intent": "return",
+            "domain": "default"
+          },
+          "hai,harri,karni,potter,return": {
+            "intent": "return",
+            "domain": "default"
+          },
+          "book,hai,kisn,li,ye": {
+            "intent": "who_rented",
+            "domain": "default"
+          },
+          "book,has,this,who": {
+            "intent": "who_rented",
+            "domain": "default"
+          },
+          "book,kisn,li,ye": {
+            "intent": "who_rented",
+            "domain": "default"
+          },
+          "rent,this,who": {
+            "intent": "who_rented",
+            "domain": "default"
+          },
+          "hogi,kab,return": {
+            "intent": "due_date",
+            "domain": "default"
+          },
+          "date,due,hai,kya": {
+            "intent": "due_date",
+            "domain": "default"
+          },
+          "be,it,return,when,will": {
+            "intent": "due_date",
+            "domain": "default"
+          },
+          "do,kar,reserv": {
+            "intent": "reserve",
+            "domain": "default"
+          },
+          "daal,do,me,waitlist": {
+            "intent": "reserve",
+            "domain": "default"
+          },
+          "add,list,me,to,wait": {
+            "intent": "reserve",
+            "domain": "default"
+          },
+          "book,for,hold,me,this": {
+            "intent": "reserve",
+            "domain": "default"
+          },
+          "aay,dena,jab,mujh": {
+            "intent": "reserve",
+            "domain": "default"
+          },
+          "book,do,kar,meri,return,saari": {
+            "intent": "return_all",
+            "domain": "default"
+          },
+          "all,book,return": {
+            "intent": "return_all",
+            "domain": "default"
+          },
+          "all,book,my,return": {
+            "intent": "return_all",
+            "domain": "default"
+          },
+          "book,hai,karni,sab,wapa": {
+            "intent": "return_all",
+            "domain": "default"
+          },
+          "everyth,return": {
+            "intent": "return_all",
+            "domain": "default"
+          },
+          "book,hai,karni,mujh,return,sab": {
+            "intent": "return_all",
+            "domain": "default"
+          },
+          "all,back,book,give": {
+            "intent": "return_all",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "availability": "default",
+          "rent": "default",
+          "return": "default",
+          "who_rented": "default",
+          "due_date": "default",
+          "reserve": "default",
+          "return_all": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "book hai kya",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "kya ye book available hai",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you have this book",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "is this book available",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "mujhe ye book chahiye",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "ye book mil sakti hai kya",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "available hai kya",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "can i get this book",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "is book present",
+            "intent": "availability"
+          },
+          {
+            "domain": "default",
+            "utterance": "book rent karni hai",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "mujhe book leni hai",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "rent this book",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "i want to rent a book",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "lend me this book",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "can i take this book",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "book issue karni hai",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "mujhe ye book de do",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "book chahiye rent pe",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "harry potter book rent karni hai",
+            "intent": "rent"
+          },
+          {
+            "domain": "default",
+            "utterance": "book return karni hai",
+            "intent": "return"
+          },
+          {
+            "domain": "default",
+            "utterance": "mujhe book wapas karni hai",
+            "intent": "return"
+          },
+          {
+            "domain": "default",
+            "utterance": "return this book",
+            "intent": "return"
+          },
+          {
+            "domain": "default",
+            "utterance": "i want to return the book",
+            "intent": "return"
+          },
+          {
+            "domain": "default",
+            "utterance": "book jama karni hai",
+            "intent": "return"
+          },
+          {
+            "domain": "default",
+            "utterance": "give back this book",
+            "intent": "return"
+          },
+          {
+            "domain": "default",
+            "utterance": "return my book",
+            "intent": "return"
+          },
+          {
+            "domain": "default",
+            "utterance": "harry potter return karni hai",
+            "intent": "return"
+          },
+          {
+            "domain": "default",
+            "utterance": "kisne ye book li hai",
+            "intent": "who_rented"
+          },
+          {
+            "domain": "default",
+            "utterance": "who has this book",
+            "intent": "who_rented"
+          },
+          {
+            "domain": "default",
+            "utterance": "ye book kisne li",
+            "intent": "who_rented"
+          },
+          {
+            "domain": "default",
+            "utterance": "who rented this",
+            "intent": "who_rented"
+          },
+          {
+            "domain": "default",
+            "utterance": "kab return hogi",
+            "intent": "due_date"
+          },
+          {
+            "domain": "default",
+            "utterance": "due date kya hai",
+            "intent": "due_date"
+          },
+          {
+            "domain": "default",
+            "utterance": "when will it be returned",
+            "intent": "due_date"
+          },
+          {
+            "domain": "default",
+            "utterance": "reserve kar do",
+            "intent": "reserve"
+          },
+          {
+            "domain": "default",
+            "utterance": "waitlist me daal do",
+            "intent": "reserve"
+          },
+          {
+            "domain": "default",
+            "utterance": "add me to waiting list",
+            "intent": "reserve"
+          },
+          {
+            "domain": "default",
+            "utterance": "hold this book for me",
+            "intent": "reserve"
+          },
+          {
+            "domain": "default",
+            "utterance": "jab aaye mujhe dena",
+            "intent": "reserve"
+          },
+          {
+            "domain": "default",
+            "utterance": "meri saari books return kar do",
+            "intent": "return_all"
+          },
+          {
+            "domain": "default",
+            "utterance": "return all books",
+            "intent": "return_all"
+          },
+          {
+            "domain": "default",
+            "utterance": "return all my books",
+            "intent": "return_all"
+          },
+          {
+            "domain": "default",
+            "utterance": "sab books wapas karni hai",
+            "intent": "return_all"
+          },
+          {
+            "domain": "default",
+            "utterance": "return everything",
+            "intent": "return_all"
+          },
+          {
+            "domain": "default",
+            "utterance": "mujhe sab books return karni hai",
+            "intent": "return_all"
+          },
+          {
+            "domain": "default",
+            "utterance": "give back all books",
+            "intent": "return_all"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "book": 1,
+              "hai": 1,
+              "kya": 1,
+              "ye": 1,
+              "avail": 1,
+              "do": 1,
+              "you": 1,
+              "have": 1,
+              "this": 1,
+              "is": 1,
+              "mujh": 1,
+              "chahiy": 1,
+              "mil": 1,
+              "sakti": 1,
+              "can": 1,
+              "i": 1,
+              "get": 1,
+              "present": 1,
+              "rent": 1,
+              "karni": 1,
+              "leni": 1,
+              "want": 1,
+              "to": 1,
+              "a": 1,
+              "lend": 1,
+              "me": 1,
+              "take": 1,
+              "issu": 1,
+              "de": 1,
+              "pe": 1,
+              "harri": 1,
+              "potter": 1,
+              "return": 1,
+              "wapa": 1,
+              "the": 1,
+              "jama": 1,
+              "give": 1,
+              "back": 1,
+              "my": 1,
+              "kisn": 1,
+              "li": 1,
+              "who": 1,
+              "has": 1,
+              "kab": 1,
+              "hogi": 1,
+              "due": 1,
+              "date": 1,
+              "when": 1,
+              "will": 1,
+              "it": 1,
+              "be": 1,
+              "reserv": 1,
+              "kar": 1,
+              "waitlist": 1,
+              "daal": 1,
+              "add": 1,
+              "wait": 1,
+              "list": 1,
+              "hold": 1,
+              "for": 1,
+              "jab": 1,
+              "aay": 1,
+              "dena": 1,
+              "meri": 1,
+              "saari": 1,
+              "all": 1,
+              "sab": 1,
+              "everyth": 1
+            },
+            "intents": {
+              "availability": 1,
+              "rent": 1,
+              "return": 1,
+              "who_rented": 1,
+              "due_date": 1,
+              "reserve": 1,
+              "return_all": 1
+            },
+            "intentFeatures": {
+              "availability": {
+                "book": 1,
+                "hai": 1,
+                "kya": 1,
+                "ye": 1,
+                "avail": 1,
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "this": 1,
+                "is": 1,
+                "mujh": 1,
+                "chahiy": 1,
+                "mil": 1,
+                "sakti": 1,
+                "can": 1,
+                "i": 1,
+                "get": 1,
+                "present": 1
+              },
+              "rent": {
+                "book": 1,
+                "rent": 1,
+                "karni": 1,
+                "hai": 1,
+                "mujh": 1,
+                "leni": 1,
+                "this": 1,
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "a": 1,
+                "lend": 1,
+                "me": 1,
+                "can": 1,
+                "take": 1,
+                "issu": 1,
+                "ye": 1,
+                "de": 1,
+                "do": 1,
+                "chahiy": 1,
+                "pe": 1,
+                "harri": 1,
+                "potter": 1
+              },
+              "return": {
+                "book": 1,
+                "return": 1,
+                "karni": 1,
+                "hai": 1,
+                "mujh": 1,
+                "wapa": 1,
+                "this": 1,
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "the": 1,
+                "jama": 1,
+                "give": 1,
+                "back": 1,
+                "my": 1,
+                "harri": 1,
+                "potter": 1
+              },
+              "who_rented": {
+                "kisn": 1,
+                "ye": 1,
+                "book": 1,
+                "li": 1,
+                "hai": 1,
+                "who": 1,
+                "has": 1,
+                "this": 1,
+                "rent": 1
+              },
+              "due_date": {
+                "kab": 1,
+                "return": 1,
+                "hogi": 1,
+                "due": 1,
+                "date": 1,
+                "kya": 1,
+                "hai": 1,
+                "when": 1,
+                "will": 1,
+                "it": 1,
+                "be": 1
+              },
+              "reserve": {
+                "reserv": 1,
+                "kar": 1,
+                "do": 1,
+                "waitlist": 1,
+                "me": 1,
+                "daal": 1,
+                "add": 1,
+                "to": 1,
+                "wait": 1,
+                "list": 1,
+                "hold": 1,
+                "this": 1,
+                "book": 1,
+                "for": 1,
+                "jab": 1,
+                "aay": 1,
+                "mujh": 1,
+                "dena": 1
+              },
+              "return_all": {
+                "meri": 1,
+                "saari": 1,
+                "book": 1,
+                "return": 1,
+                "kar": 1,
+                "do": 1,
+                "all": 1,
+                "my": 1,
+                "sab": 1,
+                "wapa": 1,
+                "karni": 1,
+                "hai": 1,
+                "everyth": 1,
+                "mujh": 1,
+                "give": 1,
+                "back": 1
+              }
+            },
+            "featuresToIntent": {
+              "book": [
+                "availability",
+                "rent",
+                "return",
+                "who_rented",
+                "reserve",
+                "return_all"
+              ],
+              "hai": [
+                "availability",
+                "rent",
+                "return",
+                "who_rented",
+                "due_date",
+                "return_all"
+              ],
+              "kya": [
+                "availability",
+                "due_date"
+              ],
+              "ye": [
+                "availability",
+                "rent",
+                "who_rented"
+              ],
+              "avail": [
+                "availability"
+              ],
+              "do": [
+                "availability",
+                "rent",
+                "reserve",
+                "return_all"
+              ],
+              "you": [
+                "availability"
+              ],
+              "have": [
+                "availability"
+              ],
+              "this": [
+                "availability",
+                "rent",
+                "return",
+                "who_rented",
+                "reserve"
+              ],
+              "is": [
+                "availability"
+              ],
+              "mujh": [
+                "availability",
+                "rent",
+                "return",
+                "reserve",
+                "return_all"
+              ],
+              "chahiy": [
+                "availability",
+                "rent"
+              ],
+              "mil": [
+                "availability"
+              ],
+              "sakti": [
+                "availability"
+              ],
+              "can": [
+                "availability",
+                "rent"
+              ],
+              "i": [
+                "availability",
+                "rent",
+                "return"
+              ],
+              "get": [
+                "availability"
+              ],
+              "present": [
+                "availability"
+              ],
+              "rent": [
+                "rent",
+                "who_rented"
+              ],
+              "karni": [
+                "rent",
+                "return",
+                "return_all"
+              ],
+              "leni": [
+                "rent"
+              ],
+              "want": [
+                "rent",
+                "return"
+              ],
+              "to": [
+                "rent",
+                "return",
+                "reserve"
+              ],
+              "a": [
+                "rent"
+              ],
+              "lend": [
+                "rent"
+              ],
+              "me": [
+                "rent",
+                "reserve"
+              ],
+              "take": [
+                "rent"
+              ],
+              "issu": [
+                "rent"
+              ],
+              "de": [
+                "rent"
+              ],
+              "pe": [
+                "rent"
+              ],
+              "harri": [
+                "rent",
+                "return"
+              ],
+              "potter": [
+                "rent",
+                "return"
+              ],
+              "return": [
+                "return",
+                "due_date",
+                "return_all"
+              ],
+              "wapa": [
+                "return",
+                "return_all"
+              ],
+              "the": [
+                "return"
+              ],
+              "jama": [
+                "return"
+              ],
+              "give": [
+                "return",
+                "return_all"
+              ],
+              "back": [
+                "return",
+                "return_all"
+              ],
+              "my": [
+                "return",
+                "return_all"
+              ],
+              "kisn": [
+                "who_rented"
+              ],
+              "li": [
+                "who_rented"
+              ],
+              "who": [
+                "who_rented"
+              ],
+              "has": [
+                "who_rented"
+              ],
+              "kab": [
+                "due_date"
+              ],
+              "hogi": [
+                "due_date"
+              ],
+              "due": [
+                "due_date"
+              ],
+              "date": [
+                "due_date"
+              ],
+              "when": [
+                "due_date"
+              ],
+              "will": [
+                "due_date"
+              ],
+              "it": [
+                "due_date"
+              ],
+              "be": [
+                "due_date"
+              ],
+              "reserv": [
+                "reserve"
+              ],
+              "kar": [
+                "reserve",
+                "return_all"
+              ],
+              "waitlist": [
+                "reserve"
+              ],
+              "daal": [
+                "reserve"
+              ],
+              "add": [
+                "reserve"
+              ],
+              "wait": [
+                "reserve"
+              ],
+              "list": [
+                "reserve"
+              ],
+              "hold": [
+                "reserve"
+              ],
+              "for": [
+                "reserve"
+              ],
+              "jab": [
+                "reserve"
+              ],
+              "aay": [
+                "reserve"
+              ],
+              "dena": [
+                "reserve"
+              ],
+              "meri": [
+                "return_all"
+              ],
+              "saari": [
+                "return_all"
+              ],
+              "all": [
+                "return_all"
+              ],
+              "sab": [
+                "return_all"
+              ],
+              "everyth": [
+                "return_all"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "book",
+                "hai",
+                "kya",
+                "ye",
+                "avail",
+                "do",
+                "you",
+                "have",
+                "this",
+                "is",
+                "mujh",
+                "chahiy",
+                "mil",
+                "sakti",
+                "can",
+                "i",
+                "get",
+                "present",
+                "rent",
+                "karni",
+                "leni",
+                "want",
+                "to",
+                "a",
+                "lend",
+                "me",
+                "take",
+                "issu",
+                "de",
+                "pe",
+                "harri",
+                "potter",
+                "return",
+                "wapa",
+                "the",
+                "jama",
+                "give",
+                "back",
+                "my",
+                "kisn",
+                "li",
+                "who",
+                "has",
+                "kab",
+                "hogi",
+                "due",
+                "date",
+                "when",
+                "will",
+                "it",
+                "be",
+                "reserv",
+                "kar",
+                "waitlist",
+                "daal",
+                "add",
+                "wait",
+                "list",
+                "hold",
+                "for",
+                "jab",
+                "aay",
+                "dena",
+                "meri",
+                "saari",
+                "all",
+                "sab",
+                "everyth"
+              ],
+              "intents": [
+                "availability",
+                "rent",
+                "return",
+                "who_rented",
+                "due_date",
+                "reserve",
+                "return_all"
+              ],
+              "perceptrons": [
+                [
+                  2.4744105339050293,
+                  -0.5005597472190857,
+                  10.22755241394043,
+                  -1.4648221731185913,
+                  2.7681729793548584,
+                  -0.3707880675792694,
+                  5.416590690612793,
+                  5.416590690612793,
+                  -0.05758759379386902,
+                  7.463322162628174,
+                  1.797894835472107,
+                  9.667196273803711,
+                  1.022060751914978,
+                  1.022060751914978,
+                  1.572586178779602,
+                  0.8817867636680603,
+                  7.919379711151123,
+                  2.969496250152588,
+                  -8.846942901611328,
+                  -4.0447564125061035,
+                  -5.140618801116943,
+                  -0.6864210963249207,
+                  -0.6864210963249207,
+                  -0.5221312642097473,
+                  -2.353290557861328,
+                  -2.9427120685577393,
+                  -6.3462018966674805,
+                  -1.0636359453201294,
+                  -5.157100677490234,
+                  -4.641465663909912,
+                  -0.005321451462805271,
+                  -0.005321451462805271,
+                  -3.813943386077881,
+                  -1.1473027467727661,
+                  -0.05263688787817955,
+                  -0.15872816741466522,
+                  -1.9201351404190063,
+                  -1.9201351404190063,
+                  -0.44829660654067993,
+                  -2.4527604579925537,
+                  -2.4527604579925537,
+                  -1.9158486127853394,
+                  -1.9158486127853394,
+                  0,
+                  0,
+                  -5.522759914398193,
+                  -5.522759914398193,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.46103155612945557,
+                  -0.5854818224906921,
+                  -0.02734832651913166,
+                  -0.02734832651913166,
+                  0,
+                  0,
+                  0,
+                  -0.4433768391609192,
+                  -0.4433768391609192,
+                  -1.058178186416626,
+                  -1.058178186416626,
+                  -1.058178186416626,
+                  -0.11360257863998413,
+                  -0.11360257863998413,
+                  -0.29969438910484314,
+                  0,
+                  0,
+                  1.4212747083923185
+                ],
+                [
+                  6.369502067565918,
+                  0.24617604911327362,
+                  -5.1242547035217285,
+                  -2.159700870513916,
+                  -1.5173156261444092,
+                  2.512896776199341,
+                  -3.2064762115478516,
+                  -3.2064762115478516,
+                  -0.796290934085846,
+                  -2.8093485832214355,
+                  1.3065204620361328,
+                  -3.8176939487457275,
+                  -0.1019970178604126,
+                  -0.1019970178604126,
+                  1.6451866626739502,
+                  0.7741864323616028,
+                  -6.327660083770752,
+                  -1.8952511548995972,
+                  10.285930633544922,
+                  -0.7562875747680664,
+                  8.025096893310547,
+                  -0.8709757328033447,
+                  -1.3037095069885254,
+                  0.7045360207557678,
+                  7.919902801513672,
+                  2.4868249893188477,
+                  7.973660469055176,
+                  10.01533317565918,
+                  7.9006266593933105,
+                  3.083879232406616,
+                  -0.11828810721635818,
+                  -0.11828810721635818,
+                  -6.642845153808594,
+                  -6.861356258392334,
+                  -1.4791871309280396,
+                  -5.029940128326416,
+                  -2.322521209716797,
+                  -2.322521209716797,
+                  -0.14771662652492523,
+                  -2.4193711280822754,
+                  -2.4193711280822754,
+                  -7.826198101043701,
+                  -1.2352383136749268,
+                  0,
+                  0,
+                  -0.06808990240097046,
+                  -0.06808990240097046,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.40149039030075073,
+                  -0.4627935588359833,
+                  -1.7180202007293701,
+                  -1.7180202007293701,
+                  -0.4082002341747284,
+                  -0.4082002341747284,
+                  -0.4082002341747284,
+                  -3.277507781982422,
+                  -3.277507781982422,
+                  -0.5244910717010498,
+                  -0.5244910717010498,
+                  -0.5244910717010498,
+                  -0.06125353276729584,
+                  -0.06125353276729584,
+                  -0.15267054736614227,
+                  -0.282380610704422,
+                  0,
+                  -1.6508704269705317
+                ],
+                [
+                  2.626366138458252,
+                  0.5250433683395386,
+                  -1.6626527309417725,
+                  -2.0472347736358643,
+                  -2.820645332336426,
+                  -3.3647327423095703,
+                  -1.142238736152649,
+                  -1.142238736152649,
+                  5.56562614440918,
+                  -2.820645332336426,
+                  0.6547489762306213,
+                  0,
+                  0,
+                  0,
+                  -3.1594152450561523,
+                  -1.0712710618972778,
+                  -1.738707184791565,
+                  0,
+                  -8.136025428771973,
+                  5.333111763000488,
+                  -1.4935393333435059,
+                  2.0885939598083496,
+                  1.8056113719940186,
+                  -0.6864710450172424,
+                  -1.6749197244644165,
+                  -3.962770700454712,
+                  -1.4104161262512207,
+                  -6.263012409210205,
+                  0,
+                  0,
+                  1.1252440214157104,
+                  1.1252440214157104,
+                  8.617429733276367,
+                  7.691224575042725,
+                  2.8120181560516357,
+                  8.288235664367676,
+                  4.335794925689697,
+                  4.335794925689697,
+                  5.266846656799316,
+                  -2.0472347736358643,
+                  -2.0472347736358643,
+                  -2.9971728324890137,
+                  -2.6610569953918457,
+                  -3.0447990894317627,
+                  -3.0447990894317627,
+                  -0.6444188356399536,
+                  -0.6444188356399536,
+                  -1.5247902870178223,
+                  -1.5247902870178223,
+                  -1.5247902870178223,
+                  -1.5247902870178223,
+                  -0.05637650564312935,
+                  -2.0238606929779053,
+                  -0.051645610481500626,
+                  -0.051645610481500626,
+                  -0.21911406517028809,
+                  -0.21911406517028809,
+                  -0.21911406517028809,
+                  -1.8631705045700073,
+                  -1.8631705045700073,
+                  -0.29501500725746155,
+                  -0.29501500725746155,
+                  -0.29501500725746155,
+                  -1.911548137664795,
+                  -1.911548137664795,
+                  -13.800355911254883,
+                  -15.304285049438477,
+                  -6.0468621253967285,
+                  -2.5371963812445024
+                ],
+                [
+                  -3.4837944507598877,
+                  0.04502269998192787,
+                  -1.9512264728546143,
+                  3.903796672821045,
+                  -1.6321982145309448,
+                  -1.3736777305603027,
+                  -0.6947460174560547,
+                  -0.6947460174560547,
+                  1.8177813291549683,
+                  -0.8006963133811951,
+                  -1.4557857513427734,
+                  -1.2003589868545532,
+                  -0.5243882536888123,
+                  -0.5243882536888123,
+                  -0.7395004630088806,
+                  -0.8558932542800903,
+                  -0.5975921750068665,
+                  -0.0029394037555903196,
+                  0.816091001033783,
+                  -0.9392539262771606,
+                  0,
+                  -0.09507909417152405,
+                  -0.2533479332923889,
+                  -0.09507909417152405,
+                  -0.17810039222240448,
+                  -1.4052339792251587,
+                  -0.09043284505605698,
+                  0,
+                  -0.02097795531153679,
+                  -0.06966401636600494,
+                  -0.0009297374053858221,
+                  -0.0009297374053858221,
+                  -1.4044767618179321,
+                  -0.3582860231399536,
+                  0,
+                  0,
+                  -0.6098278760910034,
+                  -0.6098278760910034,
+                  -0.1743636578321457,
+                  6.488833427429199,
+                  6.488833427429199,
+                  10.773309707641602,
+                  4.3200907707214355,
+                  -0.13096056878566742,
+                  -0.13096056878566742,
+                  -0.14633353054523468,
+                  -0.14633353054523468,
+                  -0.10764769464731216,
+                  -0.10764769464731216,
+                  -0.10764769464731216,
+                  -0.10764769464731216,
+                  -0.12490326166152954,
+                  -0.3812991976737976,
+                  -0.0962100625038147,
+                  -0.0962100625038147,
+                  -0.10836215317249298,
+                  -0.10836215317249298,
+                  -0.10836215317249298,
+                  -0.7893556356430054,
+                  -0.7893556356430054,
+                  -0.1474299281835556,
+                  -0.1474299281835556,
+                  -0.1474299281835556,
+                  -0.19129861891269684,
+                  -0.19129861891269684,
+                  -0.8462778329849243,
+                  -0.5127002596855164,
+                  -0.0011652467073872685,
+                  0.864735619781939
+                ],
+                [
+                  -3.3288652896881104,
+                  0.0733964666724205,
+                  1.7819569110870361,
+                  -0.4873593747615814,
+                  -2.9599783420562744,
+                  -0.7777716517448425,
+                  0,
+                  0,
+                  -0.5433223247528076,
+                  0,
+                  -0.6599340438842773,
+                  0,
+                  -0.21416370570659637,
+                  -0.21416370570659637,
+                  0,
+                  -0.053375933319330215,
+                  0,
+                  0,
+                  -0.3225954473018646,
+                  -1.6690030097961426,
+                  0,
+                  -0.053375933319330215,
+                  -0.3362448811531067,
+                  0,
+                  0,
+                  -0.5735045075416565,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1.0168293714523315,
+                  -1.0168293714523315,
+                  2.095867395401001,
+                  -0.07451894134283066,
+                  -0.053375933319330215,
+                  0,
+                  0,
+                  0,
+                  -0.4159475862979889,
+                  0,
+                  0,
+                  -0.3225954473018646,
+                  0,
+                  5.5425705909729,
+                  5.5425705909729,
+                  5.662834167480469,
+                  5.662834167480469,
+                  2.7712926864624023,
+                  2.7712926864624023,
+                  2.7712926864624023,
+                  2.7712926864624023,
+                  -0.2760259509086609,
+                  -0.5414272546768188,
+                  -0.19648626446723938,
+                  -0.19648626446723938,
+                  -0.255868136882782,
+                  -0.255868136882782,
+                  -0.255868136882782,
+                  -0.060931578278541565,
+                  -0.060931578278541565,
+                  -0.31691697239875793,
+                  -0.31691697239875793,
+                  -0.31691697239875793,
+                  -0.20369592308998108,
+                  -0.20369592308998108,
+                  -0.8948169350624084,
+                  -0.37156376242637634,
+                  -3.200462579727173,
+                  1.104663168944207
+                ],
+                [
+                  -4.122233867645264,
+                  -1.3719574213027954,
+                  -0.8108175992965698,
+                  -1.736697793006897,
+                  -0.6305932402610779,
+                  3.0488648414611816,
+                  -0.8839938044548035,
+                  -0.8839938044548035,
+                  -0.41170868277549744,
+                  -0.2360193282365799,
+                  1.4245407581329346,
+                  -0.323295533657074,
+                  0,
+                  0,
+                  -0.11054009944200516,
+                  -0.3494383692741394,
+                  -0.11054009944200516,
+                  -0.02976243756711483,
+                  -1.2908650636672974,
+                  -0.34036150574684143,
+                  -0.1456259787082672,
+                  -0.1823936104774475,
+                  1.4157689809799194,
+                  -0.1823936104774475,
+                  -3.4174771308898926,
+                  5.298824310302734,
+                  0,
+                  0,
+                  -1.270047903060913,
+                  0,
+                  0,
+                  0,
+                  -2.5703506469726562,
+                  -0.16718289256095886,
+                  0,
+                  0,
+                  -0.13434387743473053,
+                  -0.13434387743473053,
+                  -0.1310051530599594,
+                  0,
+                  0,
+                  -0.9557923078536987,
+                  0,
+                  -0.1321764886379242,
+                  -0.1321764886379242,
+                  -0.23494760692119598,
+                  -0.23494760692119598,
+                  -0.07194720953702927,
+                  -0.07194720953702927,
+                  -0.07194720953702927,
+                  -0.07194720953702927,
+                  4.952836513519287,
+                  3.631397008895874,
+                  1.6427035331726074,
+                  1.6427035331726074,
+                  1.6395014524459839,
+                  1.6395014524459839,
+                  1.6395014524459839,
+                  5.43410062789917,
+                  5.43410062789917,
+                  3.4028515815734863,
+                  3.4028515815734863,
+                  3.4028515815734863,
+                  -1.3213794231414795,
+                  -1.3213794231414795,
+                  -0.5549700856208801,
+                  -0.34036150574684143,
+                  -0.4384895861148834,
+                  2.652617943646418
+                ],
+                [
+                  -2.6236069202423096,
+                  -2.4362213611602783,
+                  -1.8635059595108032,
+                  -2.1020560264587402,
+                  -1.0315848588943481,
+                  0.700363278388977,
+                  -0.6856685280799866,
+                  -0.6856685280799866,
+                  -4.423167705535889,
+                  -1.2928334474563599,
+                  0.19375638663768768,
+                  -0.8395125269889832,
+                  -0.21086378395557404,
+                  -0.21086378395557404,
+                  -0.3145815432071686,
+                  -1.6863501071929932,
+                  -0.3145815432071686,
+                  -0.763081967830658,
+                  -1.4489734172821045,
+                  0.14179594814777374,
+                  -0.5635363459587097,
+                  -1.2989239692687988,
+                  -1.2989239692687988,
+                  -0.1069561019539833,
+                  -0.1055772602558136,
+                  -0.2672477066516876,
+                  0,
+                  -0.7752588391304016,
+                  -0.3741535544395447,
+                  -0.11468616127967834,
+                  -1.128919243812561,
+                  -1.128919243812561,
+                  4.582836627960205,
+                  4.8643879890441895,
+                  -1.1354693174362183,
+                  0,
+                  1.96517014503479,
+                  1.96517014503479,
+                  -1.2501435279846191,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -2.433743476867676,
+                  -2.433743476867676,
+                  0,
+                  0,
+                  -1.2141703367233276,
+                  -1.2141703367233276,
+                  -1.2141703367233276,
+                  -1.2141703367233276,
+                  -2.6316545009613037,
+                  2.1551382541656494,
+                  -0.14293627440929413,
+                  -0.14293627440929413,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.005419535096734762,
+                  -0.005419535096734762,
+                  -0.005419535096734762,
+                  4.78694486618042,
+                  4.78694486618042,
+                  13.12574291229248,
+                  14.535170555114746,
+                  9.757251739501953,
+                  -0.14615000966606018
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "book hai kya"
+      ],
+      [
+        "en",
+        "kya ye book available hai"
+      ],
+      [
+        "en",
+        "do you have this book"
+      ],
+      [
+        "en",
+        "is this book available"
+      ],
+      [
+        "en",
+        "mujhe ye book chahiye"
+      ],
+      [
+        "en",
+        "ye book mil sakti hai kya"
+      ],
+      [
+        "en",
+        "available hai kya"
+      ],
+      [
+        "en",
+        "can i get this book"
+      ],
+      [
+        "en",
+        "is book present"
+      ],
+      [
+        "en",
+        "book rent karni hai"
+      ],
+      [
+        "en",
+        "mujhe book leni hai"
+      ],
+      [
+        "en",
+        "rent this book"
+      ],
+      [
+        "en",
+        "i want to rent a book"
+      ],
+      [
+        "en",
+        "lend me this book"
+      ],
+      [
+        "en",
+        "can i take this book"
+      ],
+      [
+        "en",
+        "book issue karni hai"
+      ],
+      [
+        "en",
+        "mujhe ye book de do"
+      ],
+      [
+        "en",
+        "book chahiye rent pe"
+      ],
+      [
+        "en",
+        "harry potter book rent karni hai"
+      ],
+      [
+        "en",
+        "book return karni hai"
+      ],
+      [
+        "en",
+        "mujhe book wapas karni hai"
+      ],
+      [
+        "en",
+        "return this book"
+      ],
+      [
+        "en",
+        "i want to return the book"
+      ],
+      [
+        "en",
+        "book jama karni hai"
+      ],
+      [
+        "en",
+        "give back this book"
+      ],
+      [
+        "en",
+        "return my book"
+      ],
+      [
+        "en",
+        "harry potter return karni hai"
+      ],
+      [
+        "en",
+        "kisne ye book li hai"
+      ],
+      [
+        "en",
+        "who has this book"
+      ],
+      [
+        "en",
+        "ye book kisne li"
+      ],
+      [
+        "en",
+        "who rented this"
+      ],
+      [
+        "en",
+        "kab return hogi"
+      ],
+      [
+        "en",
+        "due date kya hai"
+      ],
+      [
+        "en",
+        "when will it be returned"
+      ],
+      [
+        "en",
+        "reserve kar do"
+      ],
+      [
+        "en",
+        "waitlist me daal do"
+      ],
+      [
+        "en",
+        "add me to waiting list"
+      ],
+      [
+        "en",
+        "hold this book for me"
+      ],
+      [
+        "en",
+        "jab aaye mujhe dena"
+      ],
+      [
+        "en",
+        "meri saari books return kar do"
+      ],
+      [
+        "en",
+        "return all books"
+      ],
+      [
+        "en",
+        "return all my books"
+      ],
+      [
+        "en",
+        "sab books wapas karni hai"
+      ],
+      [
+        "en",
+        "return everything"
+      ],
+      [
+        "en",
+        "mujhe sab books return karni hai"
+      ],
+      [
+        "en",
+        "give back all books"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

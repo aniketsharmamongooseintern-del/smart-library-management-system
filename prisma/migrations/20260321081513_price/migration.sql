@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "book" ADD COLUMN     "price" INTEGER NOT NULL DEFAULT 1,
+ADD COLUMN     "quantity" INTEGER NOT NULL DEFAULT 1;
