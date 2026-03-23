@@ -46,7 +46,10 @@ export class LibraryController {
   deleteBook(@Param('id', ParseIntPipe) id: number) {
     return this.libraryService.deleteBook(id);
   }
-
+  @Get('all-books')
+  getsAllBooks() {
+    return this.libraryService.getsAllBooks();
+  }
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
   @Patch('books/:id')
@@ -72,9 +75,15 @@ export class LibraryController {
   @Post('return')
   @ApiBody({
     schema: {
-      example: { title: 'Atomic Habits' }
+      example: { bookId: 1 }
     }
   })
+  // returnBook(
+  //   @Req() req: AuthenticatedRequest,
+  //   @Body() body: { bookId: number }
+  // ) {
+  //   return this.libraryService.returnBook(req.user.id, body.bookId);
+  // }
   returnBook(
     @Req() req: AuthenticatedRequest,
     @Body() body: { title: string }

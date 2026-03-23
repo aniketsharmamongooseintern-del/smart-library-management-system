@@ -22,7 +22,11 @@ export class LibraryService {
       include: { embedding: true }
     });
   }
-
+  async getsAllBooks() {
+    return this.prisma.book.findMany({
+      orderBy: { createdAt: 'asc' }
+    });
+  }
   async deleteBook(id: number) {
     const activeRental = await this.prisma.rental.findFirst({
       where: { bookId: id, returnedAt: null }
