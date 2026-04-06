@@ -43,7 +43,7 @@ export class LibraryService {
     const user = await this.prisma.user.findUnique({
       where: { id: userId }
     });
-
+    console.log(this.rentBook);
     if (!user) throw new NotFoundException('User not found');
 
     return this.prisma.$transaction(async (tx) => {
