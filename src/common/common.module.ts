@@ -14,10 +14,10 @@ const providers = [StorageService, UtilsService, JwtStrategy];
       isGlobal: true,
       cache: true,
       load: Object.values(configs),
-      validate: validateEnvironmentVariables,
-    }),
+      validate: validateEnvironmentVariables
+    })
   ],
   providers: providers,
-  exports: providers,
+  exports: providers
 })
 export class CommonModule {}

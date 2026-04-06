@@ -4,7 +4,7 @@ import { EnvironmentVariables } from '../types';
 
 export function validateEnvironmentVariables(config: Record<string, unknown>) {
   const validatedConfig = plainToInstance(EnvironmentVariables, config, {
-    enableImplicitConversion: true,
+    enableImplicitConversion: true
   });
   const errors = validateSync(validatedConfig);
 

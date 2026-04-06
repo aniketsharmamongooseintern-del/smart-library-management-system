@@ -12,16 +12,16 @@ import {
   Environment,
   EnvironmentVariables,
   NodeType,
-  UserType,
+  UserType
 } from '../types';
 
 type Serialized<T> = T extends bigint
   ? string
   : T extends Array<infer U>
-    ? Serialized<U>[]
-    : T extends object
-      ? { [K in keyof T]: Serialized<T[K]> }
-      : T;
+  ? Serialized<U>[]
+  : T extends object
+  ? { [K in keyof T]: Serialized<T[K]> }
+  : T;
 
 @Injectable()
 export class UtilsService {
@@ -29,7 +29,7 @@ export class UtilsService {
 
   constructor(
     private readonly configService: ConfigService<EnvironmentVariables, true>,
-  ) {}
+  ) { }
 
   isProduction(): boolean {
     return this.configService.get('NODE_ENV') === Environment.Production;
@@ -135,6 +135,9 @@ export class UtilsService {
     return Math.floor(ms / 1000);
   }
 
+
+
+  // 2 hours
   msToHuman(
     ms: number,
     options?: { maxUnit?: 'day' | 'hour' | 'minute' | 'second' },

@@ -15,15 +15,15 @@ export class JwtStrategy extends PassportStrategy(Strategy, JWT_AUTH) {
 
   constructor(
     @Inject(jwtConfigFactory.KEY)
-    config: ConfigType<typeof jwtConfigFactory>,
+    config: ConfigType<typeof jwtConfigFactory>
   ) {
     super({
       jwtFromRequest: ExtractJwt.fromExtractors([
         JwtStrategy.fromCookie,
-        ExtractJwt.fromAuthHeaderAsBearerToken(),
+        ExtractJwt.fromAuthHeaderAsBearerToken()
       ]),
       ignoreExpiration: false,
-      secretOrKey: config.secret as string,
+      secretOrKey: config.secret as string
     });
   }
 
@@ -59,11 +59,11 @@ export class JwtStrategy extends PassportStrategy(Strategy, JWT_AUTH) {
   }
 
   async validate(
-    payload: JwtPayload & { readonly iat: number; readonly exp: number },
+    payload: JwtPayload & { readonly iat: number; readonly exp: number }
   ): Promise<AuthenticatedUser> {
     return {
       id: payload.sub,
-      type: payload.type,
+      type: payload.type
     };
   }
 }
